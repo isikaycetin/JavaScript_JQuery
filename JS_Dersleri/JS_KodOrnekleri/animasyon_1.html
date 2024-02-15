@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <style>
+    #container{
+        width: 200px;
+        height: 200px;
+        background: green;
+        position: relative;
+    }
+    #box{
+        width: 50px;
+        height: 50px;
+        background: red;
+        position: absolute;
+    }
+   </style>
+</head>
+<body>
+   <div id="id">
+       <div id="box"></div>
+   </div>
+   <script>
+         var pos = 0;
+         var box = document.getElementById("box");
+            
+         var t = setInterval(move,10);
+
+         function move(){
+            if(pos>=150){
+                 clearInterval(t);
+            }
+            else{
+                pos +=1;
+              box.style.left = pos+'px';
+            }
+
+         }
+        
+        /* 
+        1) JavaScript kısmında, move fonksiyonu oluşturulmuş ve bu fonksiyon, belirli bir aralıkla (setInterval) çağrılarak 
+        kutunun belirli bir yönde hareket etmesi sağlanmıştır. Hareket ettirme işlemi pos değişkeni üzerinden kontrol edilmektedir.
+        
+        2)setInterval fonksiyonu ile belirli aralıklarla move fonksiyonu çağrılır. 
+        move fonksiyonu, pos değeri 150'e ulaştığında hareketi durdurur (clearInterval fonksiyonu kullanılarak).
+        
+        */ 
+   </script>
+
+</body>
+</html>

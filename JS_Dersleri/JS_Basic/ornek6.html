@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<div onmousedown="mDown()" onmouseup="mUp()" id="id"
+style="background-color:#D94A38;width:90px;height:20px;padding:40px;font-size:18px;">
+Tıklayın</div>
+
+<script>
+    var id = document.querySelector("#id");
+    function mDown() {
+    id.style.backgroundColor = "#1ec5e5";
+    id.innerHTML = "Bırak Artık";
+}
+
+function mUp() {
+    id.style.backgroundColor="#D94A38";
+    id.innerHTML="Teşekkürler";
+}
+</script>
+
+</body>
+</html> 

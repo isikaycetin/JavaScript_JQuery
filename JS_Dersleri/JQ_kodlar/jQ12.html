@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("#gizle").click(function(){
+        $("p").hide(1000);
+    });
+    $("#getir").click(function(){
+        $("p").show(1000);
+    });
+});
+</script>
+</head>
+<body>
+
+<button id="gizle">Gizle</button>
+<button id="getir">Geri getri</button>
+
+<p>Bu bir paragraf.</p>
+<p>Bu da başka bir paragraf.</p>
+
+</body>
+</html>

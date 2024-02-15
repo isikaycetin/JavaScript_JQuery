@@ -1,0 +1,19 @@
+<!doctype html>
+<html><head>
+	<meta charset="utf8">
+</head>
+<body>
+    <div id ="demo">
+      <p>bazı metin</p>
+      <p>başka bir metin</p>
+    </div>
+    <p>Div dışında metin</p>
+    <script>
+        var a = document.getElementById("demo");
+        var arr = a.childNodes;
+        for(var x=0;x<arr.length;x++) {
+            arr[x].innerHTML = "yepyeni metin";
+        }
+    </script>
+</body></html>
+

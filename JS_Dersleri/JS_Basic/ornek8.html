@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+</head>
+<body>
+    <ul id="list1">
+        <li>The</li>
+        <li>test</li>
+    </ul>
+    <ul id="list2">
+        <li>has</li>
+        <li>passed</li>
+    </ul>
+
+    <script>
+        let lists = document.querySelectorAll('ul');
+
+        lists.forEach(function (list) {
+            let lastChild = list.lastElementChild;
+            if (lastChild) {
+                alert(lastChild.innerHTML);
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Sayfa Başlığı</title>
+</head>
+<body>
+
+    <h1>JavaScript Ne Yapabilir?</h1>
+
+    <p id="demo2">HTML içeriğini değiştirir.</p>
+
+    <button type="button"
+onclick="document.getElementById('demo1').innerHTML = 'Merhaba Dünya'">
+Tıkla1</button>
+    <button type="button"
+onclick="document.getElementById('demo2').innerHTML = 'Değişti Bile!'">
+Tıkla2</button>
+    <p id="demo1"></p>
+    <hr>
+
+    <p>HTML özelliklerini değiştirir.</p>
+    <!-- <img id="myImage" onclick="document.getElementById('myImage').src='http://www.w3schools.com/js/pic_bulbon.gif'"
+         src="http://www.w3schools.com/js/pic_bulboff.gif" width="100" height="180"> -->
+    
+    <img id="myImage" onclick="changeImage()" src="http://www.w3schools.com/js/pic_bulboff.gif" width="100" height="180">
+    <script>
+        function changeImage() {
+            var image = document.getElementById('myImage');
+            if (image.src.match("bulbon")) {
+                image.src = "http://www.w3schools.com/js/pic_bulboff.gif";
+            } else {
+                image.src = "http://www.w3schools.com/js/pic_bulbon.gif";
+            }
+        }
+    </script>
+    <hr>
+    
+    <p id="demo3">CSS özelliklerini değiştirir.</p>
+    <button type="button" onclick="CSSdegistir()">Tıkla3</button>
+    <script>
+        function CSSdegistir() {
+            var x = document.getElementById("demo3");
+            x.style.fontSize = "25px";           
+            x.style.color = "red"; 
+        }
+    </script>
+    
+    <hr>
+    <p id="demo3">Veri Kontrolü Yapar.</p>
+    <form action="pass.php" id="gonder" method="post">
+    Şifreniz: <input type="password" name="sifre" size="10" id="pass">
+    <button type="button" onclick="kontrol()">Submit</button></form>
+    <p id="demo4"></p>
+    <script>
+            function kontrol() {
+            var x = document.getElementById("pass").value;
+            if (x.length < 6 || x.length > 10) {
+                document.getElementById('demo4').innerHTML = 'Şifre Geçersiz';
+            }
+            else {
+                document.getElementById('demo4').innerHTML = 'Şifre OK';
+                document.forms["gonder"].submit();
+            }
+        }
+    </script>
+    
+</body>
+</html>

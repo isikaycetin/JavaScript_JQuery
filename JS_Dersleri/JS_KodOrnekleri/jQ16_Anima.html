@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script> 
+$(document).ready(function(){
+    $("button").click(function(){
+        var div = $("div");
+    //    div.animate({height: '300px', opacity: '0.4',left:'50px'}, "slow");
+        div.animate({width: '300px', opacity: '0.8',left:'100px'}, "slow");
+      ///  div.animate({height: '100px', opacity: '0.4',left:'150px'}, "slow");
+        div.animate({width: '300px', opacity: '0.8',left:'200px'}, "slow");
+    });
+});
+</script> 
+</head>
+<body>
+
+    <button>Animasyonu Başlat</button>
+    <p>Varsayılan olarak tüm HTML elementleri static pozisyona sahiptir. <br>Değişiklik yapabilmek için relative, fixed ya da absolute olarak ayarlanmaları gerekir!</p>
+
+    <div style="background:#98bf21;height:100px;width:100px;position:relative;"></div>
+
+</body>
+</html>

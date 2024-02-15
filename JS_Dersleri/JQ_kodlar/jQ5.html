@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("#btn1").click(function(){
+        $("p").append(" <b>Eklenen Metin</b>.");
+    });
+
+    $("#btn2").click(function(){
+        $("ol").append("<li>Eklenen Eleman</li>");
+    });
+});
+</script>
+</head>
+<body>
+
+<p>Bu bir paragraf.</p>
+<p>Bu başka bir paragraf.</p>
+
+<ol>
+  <li>Liste elemanı 1</li>
+  <li>Liste elemanı 2</li>
+  <li>Liste elemanı 3</li>
+</ol>
+
+<button id="btn1">Sonuna metin ekle</button>
+<button id="btn2">Öncesine Liste Elemanı Ekle</button>
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("button").click(function(){
+        $("h2").text("İlk paragraf arkaplan rengi = " + $("p").css("background-color"));
+        $("p").css({"background-color": "yellow", "font-size": "200%"});
+    });
+});
+</script>
+</head>
+<body>
+
+<h2>Bu bir başlık</h2>
+
+<p style="background-color:red">Bu bir paragraf.</p>
+<p style="background-color:green">Bu bir paragraf.</p>
+<p style="background-color:blue">Bu bir paragraf.</p>
+
+<button>Önce oku sonra değiştir</button>
+
+</body>
+</html>

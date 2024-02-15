@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        table {
+            border-collapse: separate;
+            width: 30%;
+            margin-top: 20px;
+        }
+
+        table, th, td {
+            border: 1px ridge black;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="" onsubmit="validateForm()">
+         <table id="formTable">
+    <tr>
+        <td><label for="ad-soyad">Ad-Soyad:</label></td>
+        <td><input type="text" id="ad-soyad" name="ad-soyad" required></td>
+    </tr>
+    <tr>
+        <td><label for="email">E-mail:</label></td>
+        <td><input type="email" id="email" name="email" required></td>
+    </tr>
+    <tr>
+        <td><label for="sifre">Şifre:</label></td>
+        <td><input type="password" id="sifre" name="sifre" required></td>
+    </tr>
+    <tr>
+        <td><label for="sifre-tekrar">Şifre Tekrar:</label></td>
+        <td><input type="password" id="sifre-tekrar" name="sifre-tekrar" required></td>
+    </tr>
+    <tr>
+        <td><label for="posta-kodu">Posta Kodu:</label></td>
+        <td><input type="text" id="posta-kodu" name="posta-kodu" required></td>
+    </tr>
+    <tr>
+        <td><label for="sehir">Şehir:</label></td>
+        <td>
+            <select id="sehir" name="sehir" style="display: block;">
+                <option value="1">Çanakkale</option>
+                <option value="2">Kırklareli</option>
+                <option value="3">İstanbul</option>
+            </select>
+        </td>
+        
+        
+    </tr>
+    <tr>
+        <td><label for="kayıt ol"></label></td>
+        <td><input type="submit" value="kayıt ol"></td>
+
+    </tr>
+    
+</table>
+</form>
+
+    <script src="formValidate.js"></script>
+    
+</body>
+
+</html>

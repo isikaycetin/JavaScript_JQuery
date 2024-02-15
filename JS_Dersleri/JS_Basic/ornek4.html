@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>My First JavaScript</h1>
+
+<button type="button"
+onclick="document.getElementById('demo').innerHTML = Date()">
+Click me to display Date and Time.</button>
+
+<p id="demo"></p>
+
+<div id="demo2" style="width:200px;border : 2px solid blue">some text</div>
+<script>
+    var x = document.getElementById("demo2");
+    x.style.color = 'orange';
+    x.style.width = '100px';
+    x.style.border = '2px solid red';
+    x.style.backgroundColor = 'lightyellow';
+</script>
+
+<div id="demo3">Bir div içeriği</div>
+<script>
+    var p = document.createElement("p");
+    var node = document.createTextNode("Bu yeni bir paragraf");
+    p.appendChild(node);
+    p.style.color = 'orange';
+
+    var div = document.getElementById("demo3");
+    div.appendChild(p);
+</script>
+    
+<div id="demo4">
+  <p id="p1">Silmek istediğimiz paragraf.</p>
+  <p id="p2">Başka bir paragraf.</p>
+</div>
+
+<script>
+    var parent = document.getElementById("demo4");
+    var child = document.getElementById("p1");
+       child.remove();
+</script>
+    
+<div id="demo5">
+  <p id="p3">Bu değişecek.</p>
+  <p id="p4">Başka bir paragraf.</p>
+</div>
+
+<script>
+    var p = document.createElement("p");
+    var node = document.createTextNode("Bu yeni paragraf");
+    p.appendChild(node);
+
+    var parent = document.getElementById("demo5");
+    var child = document.getElementById("p3");
+    parent.replaceChild(p, child);
+</script>
+
+</body>
+</html> 

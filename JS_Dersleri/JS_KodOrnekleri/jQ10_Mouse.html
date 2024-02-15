@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js">
+    </script>
+    <script>
+        // $(document).ready(function () {
+			
+		// 	var mouseHandler = function(event) {
+        //         if (event.data.say==1)
+        //             {
+        //                 $("div").html("<h4>Hoşgeldin Dostum</h4>");
+        //             }
+        //         else
+		// 		    {
+        //                 $("div").html("<h4>Umarım bir daha gelmez!</h4>");
+        //             }
+		// 	};
+
+		// 	$('#myDiv').mouseenter({say:1},mouseHandler);
+        //     $('#myDiv').mouseleave({say:2},mouseHandler);
+        // });
+
+
+
+    // document.addEventListener("DOMContentLoaded", function () {
+    // var myDiv = document.getElementById("myDiv");
+
+    // myDiv.addEventListener('mouseenter', function () {
+    //     console.log("Mouse entered!");
+    //     myDiv.innerHTML = "<h4>Hoşgeldin Dostum</h4>";        // mouseHandler fonksiyonunu çağır
+    // });
+
+    // myDiv.addEventListener('mouseleave', function () {
+    //     console.log("Mouse left!");
+    //     myDiv.innerHTML = "<h4>Umarım bir daha gelmez!</h4>"; // mouseLeaveHandler fonksiyonunu çağır
+    // });
+
+
+
+    document.addEventListener("DOMContentLoaded", function () {
+    var myDiv = document.getElementById("myDiv");
+
+    myDiv.addEventListener('mouseenter', function () {
+        mouseHandler(); // mouseHandler fonksiyonunu çağır
+    });
+
+    myDiv.addEventListener('mouseleave', function (e) {
+        mouseLeaveHandler(); // mouseLeaveHandler fonksiyonunu çağır
+    });
+
+    function mouseHandler() {
+        console.log("Mouse entered!");
+        myDiv.innerHTML = "<h4>Hoşgeldin Dostum</h4>";
+    }
+
+    function mouseLeaveHandler() {
+        console.log("Mouse left!");
+        myDiv.innerHTML = "<h4>Umarım bir daha gelmez!</h4>";
+    }
+});
+
+
+    </script>
+</head>
+<body>
+	<h1> Fonksiyon çağırma ve parametre gönderme </h1>
+    
+	<div id="myDiv" style="width:300px;height:100px;background-color:lightgreen;text-align: center">
+    </div>
+</body>
+</html>

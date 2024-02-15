@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("#btn1").click(function(){
+        $("#test1").text("Hello world!");
+    });
+    $("#btn2").click(function(){
+        $("#test2").html("<b>Hello world!</b>");
+    });
+    $("#btn3").click(function(){
+        $("#test3").val("Dolly Duck");
+    });
+});
+</script>
+</head>
+<body>
+
+<p id="test1">Bu bir paragraf.</p>
+<p id="test2">Bu başka bir paragraf.</p>
+
+<p>Input alanı: <input type="text" id="test3" value="Mickey Mouse"></p>
+
+<button id="btn1">Metin ata</button>
+<button id="btn2">HTML ata</button>
+<button id="btn3">Değer ata</button>
+
+</body>
+</html>
+

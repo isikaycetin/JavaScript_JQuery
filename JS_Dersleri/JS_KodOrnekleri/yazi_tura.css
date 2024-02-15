@@ -1,0 +1,88 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+body{
+    height: 100%;
+    background: linear-gradient(to right, #f0fff0 50%, bisque 50%) fixed;
+}
+.container{
+    background-color: #eee;
+    width: 400px;
+    padding: 50px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform:  translate(-50%,-50%);
+    box-shadow: 15px 30px 35px rgba(0,0,0,0.3);
+    border-radius: 10px;
+    perspective: 300px;
+}
+.stats{
+    text-align: right;
+    color: black;
+    font-weight: 500;
+    line-height: 25px;
+}
+.para{
+    height: 150px;
+    width: 150px;
+    position: relative,;
+    margin: 50px auto;
+    transform-style: preserve-3d;
+}
+.yazi{
+    transform: rotateX(180deg);
+}
+.buttons{
+    display: flex;
+    justify-content: space-between;
+}
+.para img{
+    width: 140px;
+}
+
+.tura,.yazi{
+     width: 100%;
+     height: 100%;
+     position: absolute;
+     backface-visibility: hidden;
+}
+button{
+    width: 120px;
+    padding: 10px 0px;
+    border: 3px solid #ff2263;
+    border-radius: 5px;
+    cursor: pointer;
+}
+#döndür{
+    background-color: #fc5185;
+    color: #fff;
+}
+#döndür:disabled{
+    background-color: #e1e0ee;
+    color: black;
+    border-radius: #e1e0ee;
+}
+.sıfırla{
+    background-color: #fff;
+    color: black;
+}
+@keyframes spin-yazi{
+    0%{
+        transform: rotateX(0);
+    }
+    100%{
+        transform: rotateX(1980deg);
+    }
+}
+@keyframes spin-tura{
+    0%{
+        transform: rotateX(0);
+    }
+    100%{
+        transform: rotateX(2160deg);
+    }
+}

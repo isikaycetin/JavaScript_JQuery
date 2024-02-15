@@ -1,0 +1,40 @@
+<!doctype html>
+<html><head>
+	<meta charset="utf8">
+    <style>
+    h1 {
+        color: #1abc9c;
+    }
+    .rem {
+        margin-left: 5px;
+        background-color: white;
+        color: red;
+        border: none;
+        cursor: pointer;
+    }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+    $(function() {
+        $("button").on("click", function() {
+        var val = $("input").val();
+        if(val !== '') {
+            var elem = $("<li></li>").text(val);
+            $(elem).append("<button class='rem'>X</button>");
+            $("#mylist").append(elem);
+            $("input").val("");
+            $(".rem").on("click", function() {
+                $(this).parent().remove();
+            });
+        }
+        });
+    });
+    </script>
+</head>
+<body>
+    <h1>Yapılacak Listesi</h1>
+    <input type="text" placeholder="Yeni Madde" />
+    <button>Ekle</button>
+    <hr>
+    <ol id="mylist"></ol>
+</body></html>

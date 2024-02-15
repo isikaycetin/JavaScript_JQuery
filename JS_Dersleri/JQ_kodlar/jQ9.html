@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("h4").click(function(){
+        $(this).hide();
+    });
+    $("p").dblclick(function(){
+        $(this).after('<iframe width="560" height="315" src="https://www.youtube.com/embed/m1GHWVVHkvI" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>');
+    });
+});
+</script>
+</head>
+<body>
+
+<h4>Bu başlığa tıkla yokolsun.</h4>
+<h4>Bu başlığa tıkla yokolsun</h4>
+<p>Bu paragrafa çıft tıkla, şarkı gelsin!</p>
+
+
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("button").click(function(){
+        $("h1, h2, p").addClass("blue");
+        $("div").removeClass("important");
+    });
+});
+</script>
+<style>
+.important {
+    font-weight: bold;
+    font-size: xx-large;
+}
+
+.blue {
+    color: blue;
+}
+</style>
+</head>
+<body>
+<h1>Başlık 1</h1>
+<h2>Başlık 2</h2>
+<p>Bu bir paragraf.</p>
+<p>Bu başka bir paragraf.</p>
+<div class="important">Bu önemli bir metin!</div><br>
+
+<button>Class ekle ve çıkar</button>
+
+</body>
+</html>

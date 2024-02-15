@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("#btn1").click(function(){
+        $("#div1").remove();
+    });
+    $("#btn2").click(function(){
+    $("#div2").empty();
+    });
+});
+</script>
+</head>
+<body>
+
+<div id="div1" style="height:100px;width:300px;border:1px solid black;background-color:yellow;">
+
+Div içinde bir metin.
+<p>div içinde bir paragraf.</p>
+<p>div içinde bir başka paragraf.</p>
+
+</div>
+<br>
+
+<button id="btn1">Remove ilk div</button>
+    <br><br>
+<div id="div2" style="height:100px;width:300px;border:1px solid black;background-color:yellow;">
+
+Div içinde bir metin.
+<p>div içinde bir paragraf.</p>
+<p>div içinde bir başka paragraf.</p>
+
+</div>
+<br>
+
+<button id="btn2">Empty ikinci div</button>
+
+</body>
+</html>
